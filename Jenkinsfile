@@ -4,7 +4,7 @@ pipeline {
 
         stage('Preparation') {
             steps {
-                sh "test -d Dockerfile" // Jenkins git clones the repo by default..
+                sh "test -f Dockerfile" // Jenkins git clones the repo by default..
             }
         }
 
