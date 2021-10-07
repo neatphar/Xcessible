@@ -3,10 +3,10 @@
 
   // Hero typed
   var typed_settings = {
-    strings: ["The ultimate job-hunting platform.", "We support the <b>PwD</b> cause!^750, click START."],
+    strings: ["The ultimate job-hunting platform.", "We support the <b>PwD</b> cause!^750, click <i>START</i>."],
     loop: false,
-    typeSpeed: 50,
-    backSpeed: 50,
+    typeSpeed: 65,
+    backSpeed: 65,
     backDelay: 1250,
     onComplete: function(){
       $("#back-to-top").fadeIn(1000);

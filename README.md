@@ -1,22 +1,22 @@
 <p align="center">
   <a href="" rel="noopener">
- <img src="https://i.imgur.com/AZ2iWek.png" alt="Project logo"></a>
+ <img src="http://167.172.189.104/assets/img/bruh.png" alt="Project logo"></a>
 </p>
-<h3 align="center">Project Title</h3>
+<h3 align="center">Xcessible</h3>
 
 <div align="center">
 
-[![Hackathon](https://img.shields.io/badge/hackathon-name-orange.svg)](http://hackathon.url.com)
+[![Hackathon](https://img.shields.io/badge/sprints-iCamp-orange.svg)](https://sprints.ai)
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
+[![GitHub Issues](https://img.shields.io/github/issues/neatphar/Xcessible.svg)](https://github.com/neatphar/Xcessible/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/neatphar/Xcessible.svg)](https://github.com/neatphar/Xcessible/pulls)
+[![License](https://img.shields.io/badge/license-GNU-blue.svg)](LICENSE.md)
 
 </div>
 
 ---
 
-<p align="center"> Few lines describing your project.
+<p align="center"> The ultimate job-hunting platform.
     <br> 
 </p>
 
@@ -111,9 +111,11 @@ Add notes about how to use the system.
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+- [@neatphar](https://github.com/neatphar) - Dockerization | Full-stack.
+- [@AhmedShawkyAhmed](https://github.com/AhmedShawkyAhmed) - Jenkins Work.
+- [@SALAMA](https://github.com/SALAMA) - Dockerization | Design.
 
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors)
+See also the list of [contributors](https://github.com/neatphar/Xcessible/contributors)
 who participated in this project.
 
 ## 🎉 Acknowledgments <a name = "acknowledgments"></a>
