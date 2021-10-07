@@ -3,10 +3,10 @@
 
   // Hero typed
   var typed_settings = {
-    strings: ["People with Disabilities (PWD) suffer<br>when it comes to hunting for jobs.", "We support the cause!^750, click START."],
+    strings: ["The ultimate job-hunting platform.", "We support the <b>PwD</b> cause!^750, click START."],
     loop: false,
-    typeSpeed: 25,
-    backSpeed: 75,
+    typeSpeed: 50,
+    backSpeed: 50,
     backDelay: 1250,
     onComplete: function(){
       $("#back-to-top").fadeIn(1000);
