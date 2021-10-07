@@ -5,8 +5,8 @@
   var typed_settings = {
     strings: ["The ultimate <b>job-hunting</b> platform.", "We support the <b>PwD</b> cause!^750, click <i>START</i>."],
     loop: false,
-    typeSpeed: 65,
-    backSpeed: 65,
+    typeSpeed: 75,
+    backSpeed: 75,
     backDelay: 1250,
     onComplete: function(){
       $("#back-to-top").fadeIn(1000);
