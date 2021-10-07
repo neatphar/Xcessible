@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img src="https://i.imgur.com/DgJGxSj.png" alt="Xcessible" width="250"></a>
+ <img src="https://i.imgur.com/Zx7nNer.png" alt="Xcessible" width="250"></a>
 </p>
 <h3 align="center">Xcessible</h3>
 
