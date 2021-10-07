@@ -71,7 +71,15 @@
   });
 
   $('#back-button').click(function() {
-    window.current_screen -= 2;
+    if(window.current_screen == 0){
+      window.current_screen = window.screen_lists.length - 1;
+      $('#header').animate({'opacity': 0}, 750);
+      $("#back-to-top").animate({
+        marginLeft: '-=100px'
+      }, 750);
+    }else{
+      window.current_screen -= 2;
+    }
     $('#back-to-top').click();
   });
   
