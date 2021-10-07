@@ -41,12 +41,21 @@
       }else{
         $(this).text(window.current_screen == window.screen_lists.length - 1 ? "TOP" : "NEXT");
       }
+      if($(this).text() == "NEXT"){
+        ('#back-button').fadeIn(750);
+      }else{
+        $('#back-button').fadeOut(750);
+      }
     }).animate({'opacity': 1}, 750);
     if(window.current_screen == 0){
       $('#header').animate({'opacity': 1}, 750);
-      $("#back-to-top").animate({
-        marginLeft: '+=100px'
-      }, 750);
+      
+      if($("#back-to-top").css("marginLeft") != "100px"){
+        $("#back-to-top").animate({
+          marginLeft: '+=100px'
+        }, 750);
+      }
+
     }else if(window.current_screen == window.screen_lists.length - 1){
       $('#header').animate({'opacity': 0}, 750);
       $("#back-to-top").animate({
@@ -61,6 +70,11 @@
     return false;
   });
 
+  $('#back-button').click(function() {
+    window.current_screen -= 2;
+    $('#back-to-top').click();
+  });
+  
 
   
   $('.skills-content').waypoint(function() {

@@ -1091,3 +1091,7 @@ section {
     padding-right: 20px 15px;
   }
 }
+
+.img-fluid{
+  height: 250px !important;
+}
