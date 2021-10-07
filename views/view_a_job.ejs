@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Xcessible - View Job</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+  <!-- Favicons -->
+  <link href="../../assets/img/favicon.png" rel="icon">
+  <!-- Google Fonts -->
+  <!-- Vendor CSS Files -->
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/owl.carousel/css/owl.carousel.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../assets/css/fonts.css" rel="stylesheet">
+  <link href="../../assets/css/style.css" rel="stylesheet">
+  <link href="../../assets/css/stars.css" rel="stylesheet">
+  <link href="../../assets/css/view.css" rel="stylesheet">
+  
+</head>
+
+<body style="overflow: hidden;">
+  <header id="header" style="overflow: hidden;">
+    <div class="d-flex flex-column" style="height: 100%;margin-top: 50%;">
+        <nav class="nav-menu" style="height: 100%;margin-left: -15px;">
+        </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="first_section" class="skills" style="background: linear-gradient(0deg, rgba(16,22,31,0.2) 0%, rgba(255,255,255,1) 100%);">
+      <div class="container">
+        <div class="section-title">
+          <h2>JOB</h2>
+          <p>
+          </p>
+        </div>
+        
+        <div class="row skills-content">
+        </div>
+      </div>
+    </section>
+    
+    <section id="second_section" class="portfolio " style="background: linear-gradient(0deg, rgba(16,22,31,0.4) 0%, rgba(16,22,31,0.2) 100%);">
+      <div class="container">
+        <div class="section-title">
+          <h2>JOB DETAILS SECTION</h2>
+          <p>
+            Here you can find details about
+          </p>
+        </div>
+        
+        <div class="row skills-content">
+            <div class="container">
+            <div class="row">
+
+              <div class="layout-content">
+                <div class="container flex-grow-1 container-p-y">
+                  <div class="container-m-nx container-m-ny theme-bg-white mb-4">
+                    <div class="media col-md-10 col-lg-8 col-xl-7 py-5 mx-auto">
+                      <img src="<%= job.IconLink %>" alt="" class="d-block ui-w-100 rounded-circle">
+                      <div class="media-body ml-5 d-block" style="margin-top: 10px;">
+                        <h4 class="font-weight-bold mb-4"><%= job.Title %></h4>
+                        
+                        <a href="javascript:void(0)" class="d-inline-block text-body">
+                          <strong><%= job.Employer %></strong>
+                          <span class="text-muted">in <%= job.Location %>.</span>
+                        </a>
+                        
+                      <a href="javascript:void(0)" class="d-inline-block text-body">
+                          <strong>Pays</strong>
+                          <span class="text-muted"> <%= job.Pay %>.</span>
+                        </a></div>
+                    </div>
+                    <hr class="m-0">
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="card mb-4">
+                        <div class="card-body">
+                          <div class="row mb-2">
+                            <div class="col-md-3 text-muted">Author:</div>
+                            <div class="col-md-9">
+                              <a href="javascript:void(0)" class="text-body"><%= job.Author %></a>
+                            </div>
+                          </div><div class="row mb-2">
+                            <div class="col-md-3 text-muted">Start Date:</div>
+                            <div class="col-md-9">
+                              <%= new Intl.DateTimeFormat('en-GB', { year: 'numeric', month: 'long', day: '2-digit'}).format(job.Timestamp) %>
+                            </div>
+                          </div>
+                          <div class="row mb-2">
+                            <div class="col-md-3 text-muted">Type:</div>
+                            <div class="col-md-9">
+                              <a href="javascript:void(0)" class="text-body"><%= job.Type %></a>
+                            </div>
+                          </div>
+
+                          <br><h6 class="my-3">Details:</h6>
+                          <div class="row mb-2">
+                            <div class="col-md-12"><%= job.Content %></div>
+                            
+                          </div>
+                          
+                        </div>
+                        <!-- <div class="card-footer text-center p-0">
+                          <div class="row no-gutters row-bordered row-border-light">
+                            <a href="javascript:void(0)" class="d-flex col flex-column text-body py-3">
+                              <div class="font-weight-bold">24</div>
+                              <div class="text-muted small">posts</div>
+                            </a>
+                            <a href="javascript:void(0)" class="d-flex col flex-column text-body py-3">
+                              <div class="font-weight-bold">51</div>
+                              <div class="text-muted small">videos</div>
+                            </a>
+                            <a href="javascript:void(0)" class="d-flex col flex-column text-body py-3">
+                              <div class="font-weight-bold">215</div>
+                              <div class="text-muted small">photos</div>
+                            </a>
+                          </div>
+                        </div> -->
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+                
+                
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </section>
+    
+
+    
+  </main>
+
+  <div class="back-to-top" style="display: none;width: 200px;" id="back-to-top">
+    <a href="#" style="vertical-align: middle;margin-top: 4px;color: inherit;display: inline-block;">SEARCH AGAIN</a>
+  </div>
+  <div style="z-index: 9999999; cursor: pointer; left: unset; right: 25px; top: 25px; mix-blend-mode: difference; margin-left: 100px;" class="back-to-top">
+    <a href="/" style="vertical-align: middle; margin-top: 4px; color: inherit; display: inline-block; opacity: 1;">HOME</a>
+  </div>
+  <div style="z-index: 9999999;cursor: pointer;left: -9px;position: fixed;top: 25px;margin-left: 100px;" class="">
+    <a href="/" style="vertical-align: middle; margin-top: 4px; display: inline-block; opacity: 1;">
+      <img src="../../assets/img/bruh.png" style="width: 122px;z-index: 93123323;">
+    </a>
+  </div>
+  
+  <!-- Vendor JS Files -->
+  <script src="../../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="../../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../assets/vendor/owl.carousel/js/owl.carousel.min.js"></script>
+  <script src="../../assets/vendor/typed.js/typed.min.js"></script>
+  <script src="../../assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../assets/js/view.js"></script>
+  <script>
+    $('html, body').animate({
+      scrollTop: ++window.current_screen != window.screen_lists.length ? $(window.screen_lists[window.current_screen]).offset().top : "0px"
+    }, 10, 'easeInOutExpo');
+    $('#back-to-top a').animate({'opacity': 0}, 10, function () {
+        $("#back-to-top").fadeOut(10);
+    }).animate({'opacity': 1}, 10);
+
+    $('#header img').animate({'opacity': 0}, 10, function () {
+      $('#header img:nth-child(1)').animate({'opacity': 1}, 10);
+    });
+
+    $(".widget-26-job-category").each(function(){
+        const choices = ["bg-soft-warning", "bg-soft-success", "bg-soft-danger", "bg-soft-info"];
+        const randomElement = choices[Math.floor(Math.random() * choices.length)];
+
+        $(this).addClass(randomElement);
+        $("i", this).addClass(randomElement.replace("-soft", ""));
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+  mongo-db:
+    image: mongo
+    ports:
+      - '27017:27017'
+    logging:
+      driver: "none"
+    volumes:
+      - /root/data:/data/db
+
+  webserver:
+    build: .
+    image: neatphar/webserver
+    ports:
+      - '80:3000'
+    links:
+      - mongo-db
+    depends_on:
+      - mongo-db
+

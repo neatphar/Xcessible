@@ -1,0 +1,105 @@
+
+<div class="result-header">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="records">Showing: <b><%= jobs.length %></b> results</div>
+        </div>
+        <div class="col-lg-6">
+            <div class="result-actions">
+                <div class="result-sorting">
+                    <span>Sort By:</span>
+                    <select class="form-control border-0" id="exampleOption" style="margin-left: 10px;">
+                        <option value="1">Relevance</option>
+                        <option value="2">Names (A-Z)</option>
+                        <option value="3">Names (Z-A)</option>
+                    </select>
+                </div>
+                <div class="result-views">
+                    <div class="btn btn-soft-base btn-icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="feather feather-list"
+                        >
+                            <line x1="8" y1="6" x2="21" y2="6"></line>
+                            <line x1="8" y1="12" x2="21" y2="12"></line>
+                            <line x1="8" y1="18" x2="21" y2="18"></line>
+                            <line x1="3" y1="6" x2="3" y2="6"></line>
+                            <line x1="3" y1="12" x2="3" y2="12"></line>
+                            <line x1="3" y1="18" x2="3" y2="18"></line>
+                        </svg>
+                    </div>
+                    <div class="btn btn-soft-base btn-icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="feather feather-grid"
+                        >
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="result-body">
+    <div class="table-responsive">
+        <table class="table widget-26">
+            <tbody>
+                <% if(jobs.length == 0) { %>
+                    <div style="width: 100%">
+                      No jobs found.
+                    </div>
+                  <% } %>
+                <% jobs.forEach(function(job){ %>
+                    <tr>
+                        <td>
+                            <div class="widget-26-job-emp-img">
+                                <img src="<%= job.IconLink %>" alt="Company" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="widget-26-job-title">
+                                <a href="view/<%= job.id %>/"><%= job.Title %></a>
+                                <p class="m-0"><a href="#" onclick="return false;" class="employer-name"><%= job.Employer %></a> <span class="text-muted time"> starts on <%= new Intl.DateTimeFormat('en-GB', { year: 'numeric', month: 'long', day: '2-digit'}).format(job.Timestamp) %></span></p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="widget-26-job-info">
+                                <p class="type m-0"><%= job.Type %></p>
+                                <p class="text-muted m-0">in <span class="location"><%= job.Location %></span></p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="widget-26-job-salary"><%= job.Pay %></div>
+                        </td>
+                        <td>
+                            <div class="widget-26-job-category">
+                                <i class="indicator"></i>
+                                <span><%= job.Tag %></span>
+                            </div>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</div>

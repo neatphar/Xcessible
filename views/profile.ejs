@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Xcessible - Profile</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <!-- Google Fonts -->
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/css/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/fonts.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/stars.css" rel="stylesheet">
+  <link href="assets/css/search.css" rel="stylesheet">
+  
+</head>
+
+<body style="overflow: hidden;">
+  <header id="header" style="overflow: hidden;">
+    <div class="d-flex flex-column" style="height: 100%;margin-top: 50%;">
+        <nav class="nav-menu" style="height: 100%;margin-left: -15px;">
+        </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="first_section" class="skills" style="background: linear-gradient(0deg, rgba(16,22,31,0.2) 0%, rgba(255,255,255,1) 100%);">
+      <div class="container">
+        <div class="section-title">
+          <h2>PROFILE</h2>
+          <p>
+          </p>
+        </div>
+        
+        <div class="row skills-content">
+        </div>
+      </div>
+    </section>
+    
+    <section id="second_section" class="portfolio " style="background: linear-gradient(0deg, rgba(16,22,31,0.4) 0%, rgba(16,22,31,0.2) 100%);">
+      <div class="container">
+        <div class="section-title">
+          <h2>JOBS YOU POSTED</h2>
+          <p>
+            This section is a list of jobs you posted on Xcessible.
+          </p>
+        </div>
+        
+        <div class="row skills-content">
+        
+
+          <div class="container">
+            <div class="row">
+                    <div class="col-12">
+                        <div class="card card-margin">
+                            <div class="card-body">
+                                <div class="row search-body">
+                                    <div class="col-lg-12">
+                                        <div class="search-result">
+                                            <div class="result-body" style="height: 60vh;">
+                                                <div class="table-responsive">
+                                                    <table class="table widget-26">
+                                                        <tbody>
+                                                            <% jobs.forEach(function(job){ %>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="widget-26-job-emp-img">
+                                                                            <img src="<%= job.IconLink %>" alt="Company" />
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="widget-26-job-title">
+                                                                            <a href="update/<%= job.id %>/"><%= job.Title %></a>
+                                                                            <p class="m-0"><a href="#" onclick="return false;" class="employer-name"><%= job.Employer %></a> <span class="text-muted time"> starts on <%= new Intl.DateTimeFormat('en-GB', { year: 'numeric', month: 'long', day: '2-digit'}).format(job.Timestamp) %></span></p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="widget-26-job-info">
+                                                                            <p class="type m-0"><%= job.Type %></p>
+                                                                            <p class="text-muted m-0">in <span class="location"><%= job.Location %></span></p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="widget-26-job-salary"><%= job.Pay %></div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="widget-26-job-category">
+                                                                            <i class="indicator"></i>
+                                                                            <span><%= job.Tag %></span>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            <% }); %>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+      </div>
+    
+    </section>
+    
+
+    
+  </main>
+
+  <div class="back-to-top" style="display: none;width: 200px;" id="back-to-top">
+    <a href="#" style="vertical-align: middle;margin-top: 4px;color: inherit;display: inline-block;">SEARCH AGAIN</a>
+  </div>
+  <div style="z-index: 9999999; cursor: pointer; left: unset; right: 25px; top: 25px; mix-blend-mode: difference; margin-left: 100px;" class="back-to-top">
+    <a href="/" style="vertical-align: middle; margin-top: 4px; color: inherit; display: inline-block; opacity: 1;">HOME</a>
+  </div>
+  <div style="z-index: 9999999;cursor: pointer;left: -9px;position: fixed;top: 25px;margin-left: 100px;" class="">
+    <a href="/" style="vertical-align: middle; margin-top: 4px; display: inline-block; opacity: 1;">
+      <img src="assets/img/bruh.png" style="width: 122px;z-index: 93123323;">
+    </a>
+  </div>
+  
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/owl.carousel/js/owl.carousel.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/search.js"></script>
+  <script>
+    $('html, body').animate({
+      scrollTop: ++window.current_screen != window.screen_lists.length ? $(window.screen_lists[window.current_screen]).offset().top : "0px"
+    }, 10, 'easeInOutExpo');
+    $('#back-to-top a').animate({'opacity': 0}, 10, function () {
+        $("#back-to-top").fadeOut(10);
+    }).animate({'opacity': 1}, 10);
+
+    $('#header img').animate({'opacity': 0}, 10, function () {
+      $('#header img:nth-child(1)').animate({'opacity': 1}, 10);
+    });
+
+    $(".widget-26-job-category").each(function(){
+        const choices = ["bg-soft-warning", "bg-soft-success", "bg-soft-danger", "bg-soft-info"];
+        const randomElement = choices[Math.floor(Math.random() * choices.length)];
+
+        $(this).addClass(randomElement);
+        $("i", this).addClass(randomElement.replace("-soft", ""));
+    });
+  </script>
+
+</body>
+
+</html>
