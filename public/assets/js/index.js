@@ -3,7 +3,7 @@
 
   // Hero typed
   var typed_settings = {
-    strings: ["The ultimate <b>job-hunting</b> platform.", "We support the <b>PwD</b> cause!^750, click <i>START</i>."],
+    strings: ["The ultimate <b>job-hunting</b> platform.", "We support the <b>PwD</b> cause!^750 click <i>START</i>."],
     loop: false,
     typeSpeed: 55,
     backSpeed: 55,
@@ -42,14 +42,14 @@
         $(this).text(window.current_screen == window.screen_lists.length - 1 ? "TOP" : "NEXT");
       }
       if($(this).text() == "NEXT"){
-        ('#back-button').fadeIn(750);
+        $('#back-button').fadeIn(750);
       }else{
         $('#back-button').fadeOut(750);
       }
     }).animate({'opacity': 1}, 750);
     if(window.current_screen == 0){
       $('#header').animate({'opacity': 1}, 750);
-      
+
       if($("#back-to-top").css("marginLeft") != "100px"){
         $("#back-to-top").animate({
           marginLeft: '+=100px'
