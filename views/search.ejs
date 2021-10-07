@@ -152,8 +152,8 @@
                 </div>
               </div>
               <select class="location-select">
-                <option disabled selected="true" value="-1">Location</option>
-                <option value="0">Any</option>
+                <option disabled  value="-1">Location</option>
+                <option value="0" selected="true">Any</option>
                 <% locations.forEach(function(location){ %>
                     <option value="<%= location %>"><%= location %></option>
                 <% }); %>

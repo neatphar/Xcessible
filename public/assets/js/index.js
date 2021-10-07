@@ -3,7 +3,7 @@
 
   // Hero typed
   var typed_settings = {
-    strings: ["The ultimate job-hunting platform.", "We support the <b>PwD</b> cause!^750, click <i>START</i>."],
+    strings: ["The ultimate <b>job-hunting</b> platform.", "We support the <b>PwD</b> cause!^750, click <i>START</i>."],
     loop: false,
     typeSpeed: 65,
     backSpeed: 65,
