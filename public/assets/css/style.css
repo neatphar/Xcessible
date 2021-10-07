@@ -460,7 +460,7 @@ section {
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #050d18;
+  color: whitesmoke;
   margin-bottom: 10px;
 }
 
@@ -468,14 +468,14 @@ section {
   font-size: 16px;
   padding: 5px 15px;
   display: inline-block;
-  color:gray;
+  color:whitesmoke;
   font-weight: 600;
   margin-bottom: 10px;
   border-style: solid;
   border-top: none;
   border-image-slice: 1;
   border-width: 2px;
-  border-image-source: linear-gradient(to top, gray, rgba(0,0,0,0));
+  border-image-source: linear-gradient(to top, whitesmoke, rgba(0,0,0,0));
 }
 
 .resume .resume-item ul {
