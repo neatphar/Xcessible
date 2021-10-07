@@ -3,7 +3,7 @@
 
   // Hero typed
   var typed_settings = {
-    strings: ["^250Hi^750, PWD."/*, "Do you want to find a job?", "Go on^750, click START."*/],
+    strings: ["People with Disabilities (PWD) suffer when it comes to hunting for jobs.", "We support the cause!^750, click START."],
     loop: false,
     typeSpeed: 50,
     backSpeed: 50,
