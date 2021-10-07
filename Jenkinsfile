@@ -30,7 +30,7 @@ pipeline {
         stage('Depoly') {
             steps {
                 sh "docker-compose rm -s -f 2>> /dev/null"
-                sh "docker-compose up --build"
+                sh "docker-compose up --build -d"
                 }
         }   
 
