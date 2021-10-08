@@ -23,51 +23,22 @@
 ## 📝 Table of Contents
 
 - [Problem Statement](#problem_statement)
-- [Idea / Solution](#idea)
-- [Dependencies / Limitations](#limitations)
 - [Future Scope](#future_scope)
-- [Setting up a local environment](#getting_started)
-- [Usage](#usage)
+- [Live Demo](#live_demo)
 - [Technology Stack](#tech_stack)
-- [Contributing](../CONTRIBUTING.md)
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgments)
 
 ## 🧐 Problem Statement <a name = "problem_statement"></a>
 
-It is useful to design and follow a specific format when writing a problem statement. While there are several options
-for doing this, the following is a simple and straightforward template often used in Business Analysis to maintain
-focus on defining the problem.
-
-- IDEAL: This section is used to describe the desired or “to be” state of the process or product. At large, this section
-  should illustrate what the expected environment would look like once the solution is implemented.
-- REALITY: This section is used to describe the current or “as is” state of the process or product.
-- CONSEQUENCES: This section is used to describe the impacts on the business if the problem is not fixed or improved upon.
-  This includes costs associated with loss of money, time, productivity, competitive advantage, and so forth.
-
-Following this format will result in a workable document that can be used to understand the problem and elicit
-requirements that will lead to a winning solution.
-
-## 💡 Idea / Solution <a name = "idea"></a>
-
-This section is used to describe potential solutions.
-
-Once the ideal, reality, and consequences sections have been
-completed, and understood, it becomes easier to provide a solution for solving the problem.
-
-## ⛓️ Dependencies / Limitations <a name = "limitations"></a>
-
-- What are the dependencies of your project?
-- Describe each limitation in detailed but concise terms
-- Explain why each limitation exists
-- Provide the reasons why each limitation could not be overcome using the method(s) chosen to acquire.
-- Assess the impact of each limitation in relation to the overall findings and conclusions of your project, and if
-  appropriate, describe how these limitations could point to the need for further research.
+This platform is created for PWDs first and foremost in mind. **Xcessible** is not just another job-hunting platform, it is dedicated to provide you, as well as employers, the most convenient method of communication that removes the unnecessary employment red tape for both employers and PWDs, with an environment that is exclusively **PWD-friendly** and **PWD-dedicated**, allowing employers to specify their employment requirements in richer and more context-aware detail and giving you the job-hunting platform that adapts to your needs and expectations when searching for jobs without the hassle of having to manually filter them out.
 
 ## 🚀 Future Scope <a name = "future_scope"></a>
 
-Write about what you could not develop during the course of the Hackathon; and about what your project can achieve
-in the future.
+We aim to do a full launch of the proejct with improved features on **1st of June, 2022**. However our current plan of features include:
+- Advanced Search System with the ability to filter through job posts with _accepted types of disability_.
+- AI-Powered Recommendation System to suggest jobs to our users based on their profiles and previous interests.
+- Social Media Platform to ease communications and connect employers with users.
 
 ## 🎈 Live Demo <a name = "live_demo"></a>
 
@@ -94,6 +65,6 @@ who participated in this project.
 
 ## 🎉 Acknowledgments <a name = "acknowledgments"></a>
 
-- NAID Assistive Technologies
-- iHub
-- Sprints
+- NAID Assistive Technologies,
+- iHub,
+- Sprints.
