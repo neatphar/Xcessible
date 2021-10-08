@@ -69,38 +69,13 @@ completed, and understood, it becomes easier to provide a solution for solving t
 Write about what you could not develop during the course of the Hackathon; and about what your project can achieve
 in the future.
 
-## 🏁 Getting Started <a name = "getting_started"></a>
+## 🎈 Live Demo <a name = "live_demo"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development
-and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+You can try out the Jenkins server and the three deployed versions using these links. However, due to the unnecessary cost of running a VM these links will be valid until **29th of November, 2021**.
 
-### Prerequisites
+- Jenkins Server: http://167.172.189.104:90
+- Live Demo: http://167.172.189.104
 
-What things you need to install the software and how to install them.
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-## 🎈 Usage <a name="usage"></a>
-
-Add notes about how to use the system.
 
 ## ⛏️ Built With <a name = "tech_stack"></a>
 
@@ -119,6 +94,6 @@ who participated in this project.
 
 ## 🎉 Acknowledgments <a name = "acknowledgments"></a>
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+- NAID Assistive Technologies
+- iHub
+- Sprints
