@@ -4,8 +4,8 @@ services:
 
   mongo-db:
     image: mongo
-#     ports:
-#       - '27017:27017'
+    ports:
+      - '27017:27017'
     volumes:
       - /root/data:/data/db
 
