@@ -36,8 +36,10 @@ This platform is created for PWDs first and foremost in mind. **Xcessible** is n
 ## 🚀 Future Scope <a name = "future_scope"></a>
 
 We aim to do a full launch of the proejct with improved features on **1st of June, 2022**. However our current plan of features include:
+- **Accessibility Assistants** to help disabled people browse through the website.
 - **Advanced Search System** with the ability to filter through job posts with _accepted types of disability_.
 - **AI-Powered Recommendation System** to suggest jobs to our users based on their profiles and previous interests.
+- **Job Grabber** to web-scrape mutliple resources and filter PwD-suitable job posts.
 - **Social Media Platform** to ease communications and connect employers with users.
 
 ## 🎈 Live Demo <a name = "live_demo"></a>
