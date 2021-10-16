@@ -35,6 +35,7 @@ function initArtyom(voice_commands){
 }
 
 function saySomething(local_artyom, something){
+    local_artyom.shutUp();
     local_artyom.dontObey();
     local_artyom.say(something);
     local_artyom.obey();
