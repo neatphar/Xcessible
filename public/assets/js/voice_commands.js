@@ -66,15 +66,13 @@ if (window.hasOwnProperty('webkitSpeechRecognition')) {
     artyom.addCommands(voice_commands);
     artyom.fatality();
     setTimeout(function(){
-            artyom.initialize({
+        artyom.initialize({
             lang: "en-GB",
             continuous: true,
             listen: true,
             debug: true,
             speed: 1
-        }).then(function(){
-            console.log("Ready to work !");
-        });
+        })
     },250);
 
 }else{
