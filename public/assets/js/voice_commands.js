@@ -37,8 +37,12 @@ function initArtyom(voice_commands){
 function saySomething(local_artyom, something){
     local_artyom.shutUp();
     local_artyom.dontObey();
-    local_artyom.say(something);
-    local_artyom.obey();
+    local_artyom.say();
+    local_artyom.say(something,{
+        onEnd:function(){
+            local_artyom.obey();
+        }
+    });
 }
 
 if (window.hasOwnProperty('webkitSpeechRecognition')) {
