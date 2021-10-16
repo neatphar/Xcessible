@@ -46,7 +46,7 @@ if (window.hasOwnProperty('webkitSpeechRecognition')) {
     window.artyom = null;
     if(window.location.href.indexOf("search") === -1){
         
-        var intro_said = false;
+        var intro_said = !(getCookie('voice_commands') == 'true');
         $(document).click(function(){
             if(!intro_said){
                 saySomething(artyom, "Hello to Xcessible for people with disabilities.");
