@@ -35,7 +35,7 @@ if (window.hasOwnProperty('webkitSpeechRecognition')) {
     });
 
     var current_states = getCookie('voice_commands');
-    if (x) {
+    if (current_states) {
         if (current_states == 'true'){
             $("#sound-button").click();
         }
