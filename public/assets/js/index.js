@@ -14,6 +14,10 @@
   };
 
   var typedObj = new Typed('.typed', typed_settings);
+  $('.typed').click(function(){
+    $("#back-to-top").fadeIn(1000);
+  });
+
   window.current_screen = -1;
   window.screen_lists = [];
   $('main section').each(function () {window.screen_lists.push("#" + this.id);});
