@@ -24,7 +24,6 @@ if (window.hasOwnProperty('webkitSpeechRecognition')) {
     function saySomething(something){
         artyom.dontObey();
         artyom.say(something);
-        
         artyom.obey();
     }
 
@@ -47,21 +46,50 @@ if (window.hasOwnProperty('webkitSpeechRecognition')) {
         }
     }
 
-    var voice_commands = [
-        {
-            smart: true,
-            indexes: ["Search for *"],
-            action: function(i, wildcard){
-                saySomething("I don't know who is " + wildcard + " and i cannot say if is a good person");
+    var voice_commands = [];
+
+    if(window.location.href.indexOf("search") === -1){
+        
+        var intro_said = false;
+        $(document).click(function(){
+            if(!intro_said){
+                saySomething("Hello to Xcessible for people with disabilities.");
+                saySomething("Say next to navigate.");
+                intro_said = true;
             }
-        },
-        {
-            indexes:["What time is it",],
-            action:function(i){ 
-                saySomething("Never is too late to do something my friend !");
+        });
+
+        voice_commands = [ // INDEX
+            {
+                indexes:["Next", "Follow", "Previous", "Back"],
+                action:function(i){ 
+                    if(i > 1){
+                        $("#back-button").click();
+                    }else{
+                        $("#back-to-top").click();
+                    }
+                    var text = $("section:nth-child(" + (current_screen + 1) + ") div.section-title").text().split("\n").map(s => s.trim()).filter(n => n);
+                    setTimeout(function(){
+                        for(var i in text){
+                            saySomething(text[i].replace(/XCESSIBLE/g, "Xcessible").replace(/PWDS/g, "PwDs"));
+                        }
+                    }, 750);
+                }
             }
-        }
-    ];
+        ];
+
+    }else{
+        voice_commands = [ // SEARCH
+            {
+                smart: true,
+                indexes: ["Search for *"],
+                action: function(i, wildcard){
+                    saySomething("I don't know who is " + wildcard + " and i cannot say if is a good person");
+                }
+            }
+        ];
+    }
+
     
     artyom.addCommands(voice_commands);
     artyom.fatality();
