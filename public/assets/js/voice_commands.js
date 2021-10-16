@@ -20,6 +20,12 @@ function getCookie(name) {
 
 function initArtyom(voice_commands){
     var local_artyom = new Artyom();
+    voice_commands.push({
+        indexes: ["Stop", "Shut up"],
+        action: function(i){ 
+            saySomething(local_artyom, "Okay, sorry.");
+        }
+    });
     local_artyom.addCommands(voice_commands);
     local_artyom.fatality();
     setTimeout(function(){
@@ -28,7 +34,8 @@ function initArtyom(voice_commands){
             continuous: true,
             listen: true,
             debug: true,
-            speed: 1
+            speed: 1,
+            soundex: true
         })
     }, 250);
     return local_artyom
