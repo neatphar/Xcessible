@@ -21,6 +21,12 @@ function getCookie(name) {
 if (window.hasOwnProperty('webkitSpeechRecognition')) {
 
     window.artyom = new Artyom();
+    function saySomething(something){
+        artyom.dontObey();
+        artyom.say(something);
+        
+        artyom.obey();
+    }
 
     $("#sound-button").click(function(){
         $("#sound-button").toggleClass("icofont-mic-mute");
@@ -34,9 +40,9 @@ if (window.hasOwnProperty('webkitSpeechRecognition')) {
         }
     });
 
-    var current_states = getCookie('voice_commands');
-    if (current_states) {
-        if (current_states == 'true'){
+    var currentStates = getCookie('voice_commands');
+    if (currentStates) {
+        if (currentStates == 'true'){
             $("#sound-button").click();
         }
     }
@@ -46,13 +52,13 @@ if (window.hasOwnProperty('webkitSpeechRecognition')) {
             smart: true,
             indexes: ["Search for *"],
             action: function(i, wildcard){
-                artyom.say("I don't know who is " + wildcard + " and i cannot say if is a good person");
+                saySomething("I don't know who is " + wildcard + " and i cannot say if is a good person");
             }
         },
         {
             indexes:["What time is it",],
             action:function(i){ 
-                artyom.say("Never is too late to do something my friend !");
+                saySomething("Never is too late to do something my friend !");
             }
         }
     ];
