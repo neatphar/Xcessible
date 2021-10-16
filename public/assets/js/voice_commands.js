@@ -92,7 +92,7 @@ if (window.hasOwnProperty('webkitSpeechRecognition')) {
             {
                 indexes: ["Search"],
                 action: function(i){
-                    saySomething(artyom, "Going to the search page now.");
+                    saySomething(artyom, "You are in the search page now.");
                     window.location.href = "search";
                 }
             }
