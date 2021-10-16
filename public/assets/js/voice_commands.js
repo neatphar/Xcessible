@@ -43,8 +43,7 @@ function initArtyom(voice_commands){
 
 function saySomething(local_artyom, something){
     local_artyom.shutUp();
-    local_artyom.dontObey();
-    local_artyom.say();
+    // local_artyom.dontObey();
     local_artyom.say(something,{
         onEnd:function(){
             local_artyom.obey();
@@ -61,7 +60,7 @@ if (window.hasOwnProperty('webkitSpeechRecognition')) {
         var intro_said = false; 
         $(document).click(function(){
             if(!intro_said && getCookie('voice_commands') == 'true'){
-                saySomething(artyom, "Hello to Xcessible for people with disabilities. Say next to navigate. Or search to go the search page.");
+                saySomething(artyom, "Hello to Accessible for people with disabilities. Say next to navigate. Or search to go the search page.");
                 intro_said = true;
             }
         });
@@ -81,7 +80,9 @@ if (window.hasOwnProperty('webkitSpeechRecognition')) {
                         for(var i in text){
                             output += text[i].replace(/XCESSIBLE/g, "Xcessible").replace(/PWDS/g, "PwDs") + " ";
                         }
-                        saySomething(artyom, output.trim());
+                        if(output.trim().length > 5){
+                            saySomething(artyom, output.trim());
+                        }
                         if(window.current_screen == window.screen_lists.length - 1){
                             saySomething(artyom, "You reached the end of the page. Say back to go back or follow to start again.");
                         }
