@@ -47,7 +47,7 @@ if (window.hasOwnProperty('webkitSpeechRecognition')) {
     window.artyom = null;
     if(window.location.href.indexOf("search") === -1){
         
-        var intro_said = !(getCookie('voice_commands') == 'true');
+        var intro_said = getCookie('voice_commands') == 'false';
         $(document).click(function(){
             if(!intro_said){
                 saySomething(artyom, "Hello to Xcessible for people with disabilities. Say next to navigate. Or search to go the search page.");
