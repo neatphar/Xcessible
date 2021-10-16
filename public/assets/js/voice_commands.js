@@ -18,51 +18,48 @@ function getCookie(name) {
     return null;
 }
 
+function initArtyom(voice_commands){
+    var local_artyom = new Artyom();
+    local_artyom.addCommands(voice_commands);
+    local_artyom.fatality();
+    setTimeout(function(){
+        local_artyom.initialize({
+            lang: "en-GB",
+            continuous: true,
+            listen: true,
+            debug: true,
+            speed: 1
+        })
+    }, 250);
+    return local_artyom
+}
+
+function saySomething(local_artyom, something){
+    local_artyom.dontObey();
+    local_artyom.say(something);
+    local_artyom.obey();
+}
+
 if (window.hasOwnProperty('webkitSpeechRecognition')) {
 
-    window.artyom = new Artyom();
-    function saySomething(something){
-        artyom.dontObey();
-        artyom.say(something);
-        artyom.obey();
-    }
-
-    $("#sound-button").click(function(){
-        $("#sound-button").toggleClass("icofont-mic-mute");
-        $("#sound-button").toggleClass("icofont-mic");
-        if($("#sound-button").hasClass("icofont-mic")){
-            artyom.obey();
-            setCookie('voice_commands', 'true', 365);
-        }else{
-            artyom.dontObey();
-            setCookie('voice_commands', 'false', 365);
-        }
-    });
-
-    var currentStates = getCookie('voice_commands');
-    if (currentStates) {
-        if (currentStates == 'true'){
-            $("#sound-button").click();
-        }
-    }
-
     var voice_commands = [];
-
+    window.artyom = null;
     if(window.location.href.indexOf("search") === -1){
         
         var intro_said = false;
         $(document).click(function(){
             if(!intro_said){
-                saySomething("Hello to Xcessible for people with disabilities.");
-                saySomething("Say next to navigate.");
+                saySomething(artyom, "Hello to Xcessible for people with disabilities.");
+                saySomething(artyom, "Say next to navigate.");
+                saySomething(artyom, "Or search to go the search page.");
                 intro_said = true;
             }
         });
 
         voice_commands = [ // INDEX
             {
-                indexes:["Next", "Follow", "Previous", "Back"],
-                action:function(i){ 
+                indexes: ["Next", "Follow", "Previous", "Back"],
+                action: function(i){ 
                     if(i > 1){
                         $("#back-button").click();
                     }else{
@@ -71,9 +68,20 @@ if (window.hasOwnProperty('webkitSpeechRecognition')) {
                     var text = $("section:nth-child(" + (current_screen + 1) + ") div.section-title").text().split("\n").map(s => s.trim()).filter(n => n);
                     setTimeout(function(){
                         for(var i in text){
-                            saySomething(text[i].replace(/XCESSIBLE/g, "Xcessible").replace(/PWDS/g, "PwDs"));
+                            saySomething(artyom, text[i].replace(/XCESSIBLE/g, "Xcessible").replace(/PWDS/g, "PwDs"));
+                        }
+                        if(window.current_screen == window.screen_lists.length - 1){
+                            saySomething(artyom, "You reached the end of the page.");
+                            saySomething(artyom, "Say back to go back or follow to start again.");
                         }
                     }, 750);
+                }
+            },
+            {
+                indexes: ["Search"],
+                action: function(i){
+                    saySomething(artyom, "Going to the search page now.");
+                    window.location.href = "search";
                 }
             }
         ];
@@ -84,24 +92,27 @@ if (window.hasOwnProperty('webkitSpeechRecognition')) {
                 smart: true,
                 indexes: ["Search for *"],
                 action: function(i, wildcard){
-                    saySomething("I don't know who is " + wildcard + " and i cannot say if is a good person");
+                    saySomething(artyom, "I don't know who is " + wildcard + " and i cannot say if is a good person");
                 }
             }
         ];
     }
+    $("#sound-button").click(function(){
+        $("#sound-button").toggleClass("icofont-mic-mute");
+        $("#sound-button").toggleClass("icofont-mic");
+        if($("#sound-button").hasClass("icofont-mic")){
+            window.artyom = initArtyom(voice_commands);
+            setCookie('voice_commands', 'true', 365);
+        }else{
+            window.artyom.shutUp();
+            window.artyom.fatality();
+            setCookie('voice_commands', 'false', 365);
+        }
+    });
 
-    
-    artyom.addCommands(voice_commands);
-    artyom.fatality();
-    setTimeout(function(){
-        artyom.initialize({
-            lang: "en-GB",
-            continuous: true,
-            listen: true,
-            debug: true,
-            speed: 1
-        })
-    },250);
+    if (getCookie('voice_commands') == 'true'){
+        $("#sound-button").click();
+    }
 
 }else{
     $("#sound-button").hide();
