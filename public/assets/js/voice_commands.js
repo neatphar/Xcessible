@@ -50,9 +50,7 @@ if (window.hasOwnProperty('webkitSpeechRecognition')) {
         var intro_said = !(getCookie('voice_commands') == 'true');
         $(document).click(function(){
             if(!intro_said){
-                saySomething(artyom, "Hello to Xcessible for people with disabilities.");
-                saySomething(artyom, "Say next to navigate.");
-                saySomething(artyom, "Or search to go the search page.");
+                saySomething(artyom, "Hello to Xcessible for people with disabilities. Say next to navigate. Or search to go the search page.");
                 intro_said = true;
             }
         });
@@ -68,12 +66,13 @@ if (window.hasOwnProperty('webkitSpeechRecognition')) {
                     }
                     var text = $("section:nth-child(" + (current_screen + 1) + ") div.section-title").text().split("\n").map(s => s.trim()).filter(n => n);
                     setTimeout(function(){
+                        var output = "";
                         for(var i in text){
-                            saySomething(artyom, text[i].replace(/XCESSIBLE/g, "Xcessible").replace(/PWDS/g, "PwDs"));
+                            output += text[i].replace(/XCESSIBLE/g, "Xcessible").replace(/PWDS/g, "PwDs") + " ";
                         }
+                        saySomething(artyom, output.trim());
                         if(window.current_screen == window.screen_lists.length - 1){
-                            saySomething(artyom, "You reached the end of the page.");
-                            saySomething(artyom, "Say back to go back or follow to start again.");
+                            saySomething(artyom, "You reached the end of the page. Say back to go back or follow to start again.");
                         }
                     }, 750);
                 }
@@ -93,7 +92,9 @@ if (window.hasOwnProperty('webkitSpeechRecognition')) {
                 smart: true,
                 indexes: ["Search for *"],
                 action: function(i, wildcard){
-                    saySomething(artyom, "I don't know who is " + wildcard + " and i cannot say if is a good person");
+                    $("#search-input").val(wildcard);
+                    saySomething(artyom, "Searching for " + wildcard + ".");
+                    $("form.log-in").submit();
                 }
             }
         ];
