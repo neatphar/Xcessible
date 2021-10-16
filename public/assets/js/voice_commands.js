@@ -106,6 +106,23 @@ if (window.hasOwnProperty('webkitSpeechRecognition')) {
                     $("#search-input").val(wildcard);
                     saySomething(artyom, "Searching for " + wildcard + ".");
                     $("form.log-in").submit();
+                    var checkExist = setInterval(function() {
+                        if ($("#back-to-top").is(":visible")) {
+                            var text = $("div.result-header > div > div:nth-child(1) > div").text();
+                            var i = 1;
+                            $("div.result-body > div > table > tbody > tr").each(function(){
+                                text += ". Job Number 1. ";
+                                text += this.children[1].children[0].children[0].innerText + " at "; // JOB NAME
+                                text += this.children[1].children[0].children[1].children[0].innerText + ". It is "; // EMPLOYER
+                                text += this.children[2].innerText.replace("\n\n", " ") + ". It pays "; // Location
+                                text += this.children[3].innerText.replace("/", " per ") + " . it " // Pay
+                                text += this.children[1].children[0].children[1].children[1].innerText;// START DATE
+                            });
+                            saySomething(artyom, text + ". These were all the results.");       
+                            clearInterval(checkExist);
+                        }
+                     }, 100);
+
                 }
             }
         ];
