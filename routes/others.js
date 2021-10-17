@@ -69,10 +69,9 @@ exports.search_view = function(req, res){
 			if(!locations.includes(jobs[i].Location.trim())){
 				locations.push(jobs[i].Location.trim());
 			}
-			var CurrentDisabilities = jobs[i].RejectedDisabilities.split(",").filter(n => n);
-			for(var j in CurrentDisabilities){
-				if(!RejectedDisabilities.includes(CurrentDisabilities[j].trim())){
-					RejectedDisabilities.push(CurrentDisabilities[j].trim());
+			for(var j in jobs[i].RejectedDisabilities){
+				if(!RejectedDisabilities.includes(jobs[i].RejectedDisabilities[j].trim())){
+					RejectedDisabilities.push(jobs[i].RejectedDisabilities[j].trim());
 				}
 				
 			}
