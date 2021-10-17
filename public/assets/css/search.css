@@ -492,7 +492,10 @@ input:focus {
 
 }
 
-
+.multiselect-container .multiselect-filter>input.multiselect-search{
+  width: 100%  !important;
+  margin-left: -0.759rem !important;
+}
 
 
 button.multiselect.dropdown-toggle{
