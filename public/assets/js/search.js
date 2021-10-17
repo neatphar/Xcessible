@@ -49,7 +49,7 @@
 
 
   $('form').submit(function() {
-    if($("#search-input").val().length < 5 || $(".location-select option:selected").val() == "-1"){
+    if($("#search-input").val().length < 5){
       return false;
     }
     $.LoadingOverlay("show");
@@ -58,7 +58,7 @@
       url: "search",
       data: {
         keyword: $("#search-input").val(),
-        location: $(".location-select option:selected").val(),
+        location: $(".location-select option:selected").map(function(){return this.value}).toArray(),
         disabilities: $(".disability-select option:selected").map(function(){return this.value}).toArray()
       },
       success: function(data){
@@ -86,11 +86,11 @@
   $(".disability-select").multiselect({
     enableClickableOptGroups: true,
     enableFiltering: true,
-    nonSelectedText: "Select disablities"
+    nonSelectedText: "Filter by disablities"
   });
 
   $(".location-select").multiselect({
     enableFiltering: true,
-    nonSelectedText: "Select locations"
+    nonSelectedText: "Filter by locations"
   });
 })(jQuery);

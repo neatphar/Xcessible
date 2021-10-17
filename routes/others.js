@@ -83,8 +83,13 @@ exports.search = function(req, res){
 	var keys = {
 		$text: {$search: req.body.keyword}
 	};
-	if (req.body.location != "0"){
-		keys["Location"] = req.body.location;
+	var locations = JSON.parse(req.body.location)
+	if (locations.length > 0){
+		keys["Location"] = {"$in" : locations};
+	}
+	var disabilities = JSON.parse(req.body.disabilities)
+	if (disabilities.length > 0){
+		keys["RejectedDisabilities"] = {"$nin" : disabilities};
 	}
 	Job.find(keys, function(err, jobs){  	
 		res.render('search_results', { 
