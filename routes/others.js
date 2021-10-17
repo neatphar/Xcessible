@@ -27,7 +27,7 @@ exports.login = function(req, res){
 		
 	}else if(req.body.type == "registeration"){
 
-		Member.find({Username: req.body.username}, function(err, members){
+		Member.find({$or: [{Username: req.body.username}, {Name: req.body.name}]}, function(err, members){
 			if(members.length == 0) {
 				new Member({
 					Name: req.body.name,
@@ -147,7 +147,7 @@ exports.update_a_job_view = function(req, res){
 	res.locals.username = req.session.username;
 	res.locals.password = req.session.password;
 	Job.find({_id: req.params.jobId}, function(err, jobs){
-		if(err || jobs.length == 0) {
+		if(err || jobs.length == 0 || jobs[0].Author != req.session.name) {
 			res.redirect('/profile');
 			return;
 		} else {
