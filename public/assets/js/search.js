@@ -79,6 +79,8 @@
   });
   
 
-  $(".disability-select").multiselect();
+  $(".disability-select").multiselect({
+    enableClickableOptGroups: true
+  });
 
 })(jQuery);
