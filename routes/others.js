@@ -63,14 +63,24 @@ exports.search_view = function(req, res){
 	res.locals.username = req.session.username;
 	res.locals.password = req.session.password;
 	var locations = [];
+	var RejectedDisabilities = [];
 	Job.find(function(err, jobs){  	
 		for(var i in jobs){
 			if(!locations.includes(jobs[i].Location.trim())){
 				locations.push(jobs[i].Location.trim());
 			}
+			var CurrentDisabilities = jobs[i].RejectedDisabilities.split(",").filter(n => n);
+			for(var j in CurrentDisabilities){
+				if(!RejectedDisabilities.includes(CurrentDisabilities[j].trim())){
+					RejectedDisabilities.push(CurrentDisabilities[j].trim());
+				}
+				
+			}
+
 		}
 		res.render('search', { 
-			locations: locations
+			locations: locations,
+			RejectedDisabilities: RejectedDisabilities
 		});
 	});
 
@@ -176,6 +186,7 @@ exports.update_a_job = function(req, res){
 						Location: req.body.Location,
 						Pay: req.body.Pay,
 						Tag: req.body.Tag,
+						RejectedDisabilities: req.body.RejectedDisabilities.split(",").filter(n => n),
 						Content: req.body.Content
 					},
 					{upsert: true}, function(err){

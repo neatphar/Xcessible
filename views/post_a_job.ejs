@@ -76,11 +76,16 @@
                 <label for="Tag">Tag:</label>
               </div>
             </div>
-            <div class="floating-label">
-              <input required placeholder="Icon Link" name="IconLink" type="text" autocomplete="off">
-              <label for="IconLink">Icon Link:</label>
+            <div style="width: 100%; display: flex;">
+              <div class="floating-label" style="width: 50%;">
+                <input required placeholder="Rejected Disabilities (use , to add multiple)" name="RejectedDisabilities" type="text" autocomplete="off">
+                <label for="RejectedDisabilities">Rejected Disabilities (use , to add multiple):</label>
+              </div>
+              <div class="floating-label" style="width: 50%;">
+                <input required placeholder="Icon Link" name="IconLink" type="text" autocomplete="off">
+                <label for="IconLink">Icon Link:</label>
+              </div>
             </div>
-
             <div class="floating-label">
               <textarea class="text" cols="86" rows ="20" name="Content" placeholder="Content" required></textarea>
               <label for="Content" style="top: calc(50% - 59px);">Content:</label>
