@@ -37,7 +37,7 @@ This platform is created for PWDs first and foremost in mind. **Xcessible** is n
 
 We aim to do a full launch of the proejct with improved features on **1st of June, 2022**. However our current plan of features include:
 - <del>**Accessibility Assistants** to help disabled people browse through the website.</del> Currently needs [enabling](https://medium.com/@Carmichaelize/enabling-the-microphone-camera-in-chrome-for-local-unsecure-origins-9c90c3149339) the ```unsafely-treat-insecure-origin-as-secure``` flag.
-- **Advanced Search System** with the ability to filter through job posts with _accepted types of disability_.
+- <del>**Advanced Search System** with the ability to filter through job posts with _accepted types of disability_</del>.
 - **AI-Powered Recommendation System** to suggest jobs to our users based on their profiles and previous interests.
 - **Employer Reviews/Ratings** to help users better understand the nature of work at this specific employer.
 - **Job Grabber** to web-scrape mutliple resources and filter PwD-suitable job posts.
