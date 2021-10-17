@@ -15,7 +15,7 @@ exports.login = function(req, res){
 	if(req.body.type == "login"){
 		Member.find({Username: req.body.username, Password: req.body.password}, function(err, members){
 			if(members.length != 0) {
-				req.session.name = members[0].name;
+				req.session.name = members[0].Name;
 				req.session.username = req.body.username;
 				req.session.password = req.body.password;
 				req.session.logged = true;
@@ -111,8 +111,6 @@ exports.search = function(req, res){
 };
   
 exports.view_a_job = function(req, res){
-		// TODO.
-
 	Job.find({_id: req.params.jobId}, function(err, jobs){
 		if(err || jobs.length == 0) {
 			res.redirect('/search');
