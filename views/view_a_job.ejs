@@ -103,7 +103,7 @@
 
                           <br><h6 class="my-3 text-muted">Details:</h6>
                           <div class="row mb-2">
-                            <div class="col-md-12"><%- job.Content.replace('\n', '<br>') %></div>
+                            <div class="col-md-12"><%- job.Content.replace(/\n/g, '<br>') %></div>
                             
                           </div>
                           
