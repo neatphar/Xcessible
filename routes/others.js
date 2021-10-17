@@ -83,11 +83,11 @@ exports.search = function(req, res){
 	var keys = {
 		$text: {$search: req.body.keyword}
 	};
-	var locations = req.body.location.split("|")
+	var locations = req.body.location.split("|").filter(n => n);
 	if (locations.length > 0){
 		keys["Location"] = {"$in" : locations};
 	}
-	var disabilities = req.body.disabilities.split("|")
+	var disabilities = req.body.disabilities.split("|").filter(n => n);
 	if (disabilities.length > 0){
 		keys["RejectedDisabilities"] = {"$nin" : disabilities};
 	}
