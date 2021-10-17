@@ -86,11 +86,11 @@
   $(".disability-select").multiselect({
     enableClickableOptGroups: true,
     enableFiltering: true,
-    nonSelectedText: "Select a disablity"
+    nonSelectedText: "Select disablities"
   });
 
   $(".location-select").multiselect({
     enableFiltering: true,
-    nonSelectedText: "Select a location"
+    nonSelectedText: "Select locations"
   });
 })(jQuery);
