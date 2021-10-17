@@ -85,10 +85,12 @@
 
   $(".disability-select").multiselect({
     enableClickableOptGroups: true,
+    enableFiltering: true,
     nonSelectedText: "Select a disablity"
   });
-  
+
   $(".location-select").multiselect({
+    enableFiltering: true,
     nonSelectedText: "Select a location"
   });
 })(jQuery);
