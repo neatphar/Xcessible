@@ -87,5 +87,8 @@
     enableClickableOptGroups: true,
     nonSelectedText: "Select a disablity"
   });
-
+  
+  $(".location-select").multiselect({
+    nonSelectedText: "Select a location"
+  });
 })(jQuery);
