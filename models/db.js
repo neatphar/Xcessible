@@ -15,6 +15,7 @@ var Job = new Schema({
 	Timestamp: Date,
 	Type: String,
 	Location: String,
+	RejectedDisabilities: [String],
 	Pay: String,
 	Tag: String,
 	Content: String
