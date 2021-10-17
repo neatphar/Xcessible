@@ -479,6 +479,7 @@ input:focus {
 .dropdown-menu button{
   margin: 0;
   box-shadow: unset;
+  padding: .25rem 1.5rem !important;
 }
 
 .dropdown-menu{
