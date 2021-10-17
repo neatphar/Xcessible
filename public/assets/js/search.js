@@ -80,7 +80,8 @@
   
 
   $(".disability-select").multiselect({
-    enableClickableOptGroups: true
+    enableClickableOptGroups: true,
+    nonSelectedText: "Select a disablity"
   });
 
 })(jQuery);

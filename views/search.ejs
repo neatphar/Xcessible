@@ -159,10 +159,6 @@
                 <% }); %>
               </select>
               <select class="disability-select" multiple="multiple">
-                <optgroup disabled label="Disablity"></optgroup>
-                <optgroup disabled label="No Disablity"></optgroup>
-                <option disabled  value="-1">Disablity</option>
-                <option value="0" selected="true">No Disability</option>
                 <% locations.forEach(function(disability){ %>
                     <option value="<%= disability %>"><%= disability %></option>
                 <% }); %>
