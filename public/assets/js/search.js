@@ -58,8 +58,8 @@
       url: "search",
       data: {
         keyword: $("#search-input").val(),
-        location: $(".location-select option:selected").map(function(){return this.value}).toArray(),
-        disabilities: $(".disability-select option:selected").map(function(){return this.value}).toArray()
+        location: $(".location-select option:selected").map(function(){return this.value}).toArray().join("|"),
+        disabilities: $(".disability-select option:selected").map(function(){return this.value}).toArray().join("|")
       },
       success: function(data){
         $.LoadingOverlay("hide");
