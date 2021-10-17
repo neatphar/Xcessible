@@ -476,9 +476,21 @@ input:focus {
 }
 
 
+.dropdown-menu button{
+  margin: 0;
+  box-shadow: unset;
+}
 
+.dropdown-menu{
+  z-index: 999999999;
+}
 
+.dropdown-menu input{
+  border: none;
+  height: unset;
+  width: unset;
 
+}
 
 
 
