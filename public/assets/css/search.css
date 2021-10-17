@@ -195,7 +195,7 @@ input:focus {
     margin: 20px;
 }
 
-.location-select{
+.location-select, .disbility-select{
     display: inline-block;
     width: 130px;
     font-size: 16px;

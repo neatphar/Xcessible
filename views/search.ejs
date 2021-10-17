@@ -21,7 +21,7 @@
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/stars.css" rel="stylesheet">
   <link href="assets/css/search.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="assets/css/bootstrap-multiselect.min.css" type="text/css"/>
 
 
   
@@ -153,9 +153,16 @@
               </div>
               <select class="location-select">
                 <option disabled  value="-1">Location</option>
-                <option value="0" selected="true">Any</option>
+                <option value="0" selected="true">Any Location</option>
                 <% locations.forEach(function(location){ %>
                     <option value="<%= location %>"><%= location %></option>
+                <% }); %>
+              </select>
+              <select class="disbility-select">
+                <option disabled  value="-1">Disablity</option>
+                <option value="0" selected="true">No Disability</option>
+                <% locations.forEach(function(disability){ %>
+                    <option value="<%= disability %>"><%= disability %></option>
                 <% }); %>
               </select>
             </div>
@@ -247,6 +254,7 @@
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/loadingoverlay.min.js"></script>
+  <script type="text/javascript" src="assets/vendor/bootstrap-multiselect.min.js"></script>
   <script src="assets/vendor/artyom.window.min.js"></script>
   <script src="assets/js/voice_commands.js"></script>
   

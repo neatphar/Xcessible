@@ -79,4 +79,6 @@
   });
   
 
+  $(".disbility-select").multiselect();
+
 })(jQuery);
