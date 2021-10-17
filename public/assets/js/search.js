@@ -56,7 +56,11 @@
     $.ajax({
       type: "POST",
       url: "search",
-      data: {keyword: $("#search-input").val(), location: $(".location-select option:selected").val()},
+      data: {
+        keyword: $("#search-input").val(),
+        location: $(".location-select option:selected").val(),
+        disabilities: $(".disability-select option:selected").map(function(){return this.value}).toArray()
+      },
       success: function(data){
         $.LoadingOverlay("hide");
         $(".search-result").html(data);
