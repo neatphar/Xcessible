@@ -56,6 +56,8 @@ You can try out the Jenkins server and the three deployed versions using these l
 - [MongoDB](https://www.mongodb.com/) - Database
 - [Express](https://expressjs.com/) - Server Framework
 - [NodeJs](https://nodejs.org/en/) - Server Environment
+- [Docker](https://www.docker.com/) - Containerization Tool
+- [Jenkins](https://www.jenkins.io/) - CI/CD Automation Tool
 
 ## ✍️ Authors <a name = "authors"></a>
 
