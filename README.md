@@ -45,7 +45,7 @@ We aim to do a full launch of the project with improved features on **1st of Jun
 
 ## 🎈 Live Demo <a name = "live_demo"></a>
 
-You can try out the Jenkins server and the three deployed versions using these links. However, due to the unnecessary cost of running a VM these links will be valid until **29th of November, 2021**.
+You can try out the Jenkins server and the three deployed versions using these links. However, due to the unnecessary cost of running a VM these links will be valid until **20th of November, 2021**.
 
 - Jenkins Server: http://167.172.189.104:90
 - Live Demo: http://167.172.189.104
